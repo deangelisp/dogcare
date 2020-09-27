@@ -1,0 +1,51 @@
+//IMPORTS
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+* { 
+    font-family: "Open Sans", sans-serif; 
+}
+
+//TAGS
+
+body{padding-top: 40px;}
+
+figure{margin: 0;}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+input:focus, textarea:focus, select:focus, li:focus, div:focus{
+    outline: none !important;
+}
+
+//CLASSES
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.roboto-slab{
+    font-family: "Roboto Slab", sans-serif; 
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.image-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.p-0{padding: 0;}
+
+//EXCEPTIONS

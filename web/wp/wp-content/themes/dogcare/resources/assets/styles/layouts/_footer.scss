@@ -1,0 +1,35 @@
+.main-footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #000000;
+
+    p,
+    a{
+        line-height: 1.8em;
+        color: #FFF;
+    }
+
+    .primary-navigation{
+        a{
+            display: inline-block;
+            padding: 10px 5px;
+            margin: 0 15px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+    }
+
+    .social-media{
+        a{
+            margin-left: 30px;
+
+            &:first-of-type{margin: 0;}
+        }
+    }
+
+    .copyright{
+        text-transform: uppercase;
+        margin: 40px 0 0 0;
+        color: theme-color("primary")
+    }
+}

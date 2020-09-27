@@ -1,0 +1,49 @@
+
+.button{
+    @extend .roboto-slab;
+    
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #FFF !important;
+    border: none;
+    border-radius: 30px;
+    background: theme-color('primary');
+
+    img{
+        margin-right: 10px;
+        vertical-align: bottom;
+    }
+
+    &:before{
+        @extend .button-shadow;
+        top: -10px;
+        background: radial-gradient(ellipse at 50% 150%, rgba(236, 65, 27, 0.6) 0%, rgba(236, 65, 27, 0) 80%);
+    }
+
+    &:after{
+        @extend .button-shadow;
+        bottom: -10px;
+        background: radial-gradient(ellipse at 50% -50%, rgba(236, 65, 27, 0.6) 0%, rgba(236, 65, 27, 0) 80%);
+
+    }
+
+    &:hover{ 
+        text-decoration: none;
+        &:after,
+        &:before{
+            opacity: 1;
+        }
+    }
+}
+
+.button-shadow{
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 10px;
+    content: '';
+    opacity: 0;
+    transition: opacity .3s;
+}
