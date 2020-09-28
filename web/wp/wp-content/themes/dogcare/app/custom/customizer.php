@@ -106,3 +106,25 @@ function remove_customizer_settings( $wp_customize ){
 }
 add_action( 'customize_register', 'remove_customizer_settings', 20 );
 
+
+//
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'DogCare Website';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+function modify_logo() {
+    $logo_style = '<style type="text/css">';
+    $logo_style .= 'h1 a {background-image: url(' . get_option('wi_logo') . ') !important;}';
+    $logo_style .= 'body.login label{color: #FFF;}';
+    $logo_style .= 'body.login form{background: #ec411b; border-radius: 10px;}';
+    $logo_style .= 'body {background: #ffe9e4;}';
+    $logo_style .= '</style>';
+    echo $logo_style;
+}
+add_action('login_head', 'modify_logo');

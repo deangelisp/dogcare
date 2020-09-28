@@ -20,14 +20,14 @@
                             <?php echo nl2br(get_option('wi_address')) ?>
                         </p>
                     </div>
-                    <div class="col-6 flex">
+                    <div class="col-6 p-0 flex">
                         <p>
-                            <b>To Book Phone</b>
+                            <b>To Book Phone</b><br />
                             <a href="tell:<?php echo get_option('wi_phone') ?>"><?php echo get_option('wi_phone') ?></a>
                         </p>
                     </div>
                 </div>
-                <div class="col-5 text-right social-media">
+                <div class="col-5 p-0  text-right social-media">
                     <a href="<?php echo get_option('wi_facebook') ?>"><b>Facebook</b></a>
                     <a href="<?php echo get_option('wi_instagram') ?>"><b>Instagram</b></a>
                 </div>
